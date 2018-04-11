@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <!-- META SECTION -->
+    <title>test</title>
+ 
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">  
+      
+
+function check() {
+
+  return new Promise(resolve => {
+   var seconds =parseInt(txt_email.value +'000');
+    setTimeout(() => {
+	document.getElementById('error').innerHTML = "";
+      resolve(document.getElementById('target').innerHTML = "finished processing");
+    }, seconds);
+  });
+}
+
+async function TestforRecord() {
+   var seconds = parseInt(txt_email.value);
+  
+   if (seconds === parseInt(seconds)){
+   document.getElementById('error').innerHTML = "";
+    document.getElementById('target').innerHTML = "please wait "+seconds+" seconds";
+  var result = await check();
+  console.log(result);
+  }
+  
+else
+{
+ document.getElementById('target').innerHTML = "";
+  document.getElementById('error').innerHTML = "Please enter Integer value in textbox";
+  }
+	 
+  
+}
+
+
+    </script>
+   <style>
+   
+   #target
+   {
+   color:green;
+   }
+   #error
+   {
+   color:red;
+   }
+   </style>
+</head>
+<body background=img1.jpg>
+  <div>
+    <input type="text" id="txt_email" />
+	
+	   <button  onclick="TestforRecord()" ><font color="purple">Submit</font></button>
+	   <div id="target"></div>
+	    <div id="error"></div>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
